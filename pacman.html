@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacman Animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parentDiv {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background-color: #090809;
+      }
+
+      #top {
+        transform-box: fill-box;
+        animation: topMouth 0.25s ease-in-out infinite alternate forwards;
+        transform-origin: center bottom;
+      }
+
+      #bottom {
+        transform-box: fill-box;
+        animation: bottomMouth 0.25s ease-in-out infinite alternate forwards;
+        transform-origin: center top;
+      }
+
+      @keyframes topMouth {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(-30deg);
+        }
+      }
+
+      @keyframes bottomMouth {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(30deg);
+        }
+      }
+
+      #b1,
+      #b2,
+      #b3,
+      #b4,
+      #b5 {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: foodPac 2.5s ease-in-out infinite forwards;
+      }
+
+      #b1 {
+        transform: translateX(0px);
+      }
+
+      #b2 {
+        /* transform: translateX(calc(-290px * 1)); */
+        animation-delay: calc(0.5s * 1);
+      }
+      #b3 {
+        /* transform: translateX(calc(-290px * 2)); */
+        animation-delay: calc(0.5s * 2);
+      }
+      #b4 {
+        /* transform: translateX(calc(-290px * 3)); */
+        animation-delay: calc(0.5s * 3);
+      }
+      #b5 {
+        /* transform: translateX(calc(-290px * 4)); */
+        animation-delay: calc(0.5s * 4);
+      }
+
+      @keyframes foodPac {
+        0% {
+          transform: translateX(0px);
+        }
+
+        20% {
+          transform: translateX(-290px);
+        }
+        40% {
+          transform: translateX(calc(-290px * 2));
+        }
+        60% {
+          transform: translateX(calc(-290px * 3));
+        }
+        80% {
+          transform: translateX(calc(-290px * 4));
+        }
+        100% {
+          transform: translateX(calc(-290px * 5));
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parentDiv">
+      <svg
+        width="75%"
+        min-height="0"
+        viewBox="0 0 1820 916"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g id="Pacman">
+          <g id="b1">
+            <rect
+              id="Rectangle 1"
+              x="1720"
+              y="408"
+              width="100"
+              height="100"
+              rx="25"
+              fill="white"
+            />
+          </g>
+          <g id="b2">
+            <rect
+              id="Rectangle 2"
+              x="1720"
+              y="408"
+              width="100"
+              height="100"
+              rx="25"
+              fill="white"
+            />
+          </g>
+          <g id="b3">
+            <rect
+              id="Rectangle 3"
+              x="1720"
+              y="408"
+              width="100"
+              height="100"
+              rx="25"
+              fill="white"
+            />
+          </g>
+          <g id="b4">
+            <rect
+              id="Rectangle 4"
+              x="1720"
+              y="408"
+              width="100"
+              height="100"
+              rx="25"
+              fill="white"
+            />
+          </g>
+          <g id="b5">
+            <rect
+              id="Rectangle 5"
+              x="1720"
+              y="408"
+              width="100"
+              height="100"
+              rx="25"
+              fill="white"
+            />
+          </g>
+          <g id="bottom">
+            <path
+              id="Vector"
+              d="M157 457C157 457.33 157 457.67 157 458C157 638.6 303.4 785 484 785C664.6 785 811 638.6 811 458C811 457.67 811 457.33 811 457H157Z"
+              fill="#FFFD08"
+            />
+          </g>
+          <g id="top">
+            <path
+              id="Vector_2"
+              d="M484 131C303.74 131 157.55 276.86 157 457H811C810.45 276.86 664.26 131 484 131Z"
+              fill="#FFFD08"
+            />
+          </g>
+          <rect
+            id="Rectangle 6"
+            x="157"
+            y="451"
+            width="327"
+            height="14"
+            fill="#FFFD08"
+          />
+        </g>
+      </svg>
+    </div>
+  </body>
+</html>
